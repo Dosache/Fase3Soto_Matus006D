@@ -1,0 +1,168 @@
+body{
+    font-family: Verdana;
+}
+
+#capa{
+    background-image: linear-gradient(#E65573, #7968D0, black);
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+#titulo{
+    color: black;
+}
+
+#cabecera{
+    float: left;
+}
+
+header {
+    height: 30%;
+    width: 100%;
+    color: white;
+}
+
+#desplegable{
+    float: right;
+    margin-right: 14px;
+}
+
+footer #arriba{
+    background: #E65573;
+    padding-top: 15px;
+    padding-bottom: 25px; 
+    padding-left: 30px;
+    color: black;
+}
+
+#metodosP li{
+    list-style-type: none;
+    padding-top: 25px;
+    width: 95px;
+    display: inline-block;
+    float: none;
+}
+
+footer #medio{
+    background: #8B65C1;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    color: black;
+}
+
+footer #medio h5{
+    border-left-style: solid;
+    border-color: black;
+    padding-left: 5px;
+}
+
+#enumerables li{
+    text-align: left;
+    list-style-type: none;
+    padding-top: 8px;
+}
+
+#enumerables a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 400;
+    color: rgb(31, 30, 30);
+}
+
+#enumerables a:hover{
+    font-family: Verdana, Geneva, sans-serif;
+    color: black;
+}
+
+#redes li{
+    list-style-type: none;
+    padding-top: 8px;
+    float: left;
+}
+
+#redes a{
+    width: 50px;
+    display: inline-block;
+}
+
+footer #abajo{
+    width: 100%;
+    height: 80%;
+	background-color: #7968D0;
+    float: left;  
+}
+
+#derechos{
+    text-align: left;
+    font-family: 'Courier New', Courier;
+    color: white;
+    float: left;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+#teryCon{
+    text-align: right;
+    font-family: 'Courier New', Courier;
+    color: white;
+    float: right;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+}
+
+#teryCon a{
+    color: white;
+}
+
+#teryCon a:hover{
+    color: rgb(233, 231, 231);
+    text-decoration: none;
+}
+
+#caja {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 5px;
+    margin: 0;
+    background-color: white;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.btntop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 100px;
+    right: 25px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+
+.error-control {
+    border: 1px solid black;
+}
+
+label.error {
+    color: red;
+    width: 300px;
+    font-size: 0.8em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+
+
+

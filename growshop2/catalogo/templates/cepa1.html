@@ -1,0 +1,113 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block title %}<title>Autocultivo QueCorra</title>{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="icon" type="image/icon type" href="{% static 'img/icono.ico' %}">
+
+    <!-- CSS Propios-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/EstEntradas.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- JS Propios-->
+    <script src="{% static 'js/Funciones.js' %}" type="text/Javascript"></script>
+    <style>
+        body {
+            background-color: #E65573;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id=capa>
+        <!--TITULO AUTOCULTIVO-->
+        <br>
+        <br>
+
+        <div class="row justify-content-around">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'img/bilbo.jpeg' %}">
+                    <div class="card-body">
+                        <h4 class="card-title">Kritikal Bilbo</h4>
+                        <p class="card-text">De Afganistán pasando por Suiza hasta Bilbao,
+                            para ser coronada reina del baile y dejarnos a todos embelesados.
+                            Kritikal Bilbo, descendiente de la Critical Mass, un cruce entre
+                            Afgana y Skunk, una de las variedades más populares entre los cultivadores.</p>
+
+                        <p class="card-text">Prácticamente todo el mundo ha puesto alguna vez una en su huerta o sala de
+                            cultivo.
+                            Si revisas los listados de ganadores de las copas de los últimos diez años, verás
+                            como el nombre de Bilbao se repite en innumerables ocasiones, de la mano de cultivadores
+                            de todos los puntos de la Península y las Islas. Tu amigo, el que tenía un indoor,
+                            te invitaba a un porro de Kritikal Bilbo; tu dealer local te pasaba Kritikal Bilbo;
+                            el de los esquejes te ofrecía Kritikal Bilbo; en los conciertos, plazas y universidades
+                            olía a Kritikal Bilbo. ¿Qué factores llevaron esta variedad a ser una de las más populares
+                            de la escena cannábica estatal y tener casi copado el mercado?</p>
+
+                        <h5 class="card-tittle">Trucos y consejos</h5>
+                        <p class="card-text">
+                            Con el afán de maximizar y mejorar las cosechas de Kritikal Bilbo,
+                            así como marcar unas pautas para los que se inicien en esta variedad,
+                            nos pusimos en contacto con la gente de Genehtik –que por algo llevan
+                            con éxito manteniendo y comercializando la cepa durante todos estos años–,
+                            para que nos contaran algunos detalles, trucos y consejos acerca de esta variedad.</p>
+
+                        <p class="card-text">
+                            Lo primero es la siembra: dependiendo de si es en interior o en exterior,
+                            se seguirán unas pautas u otras. Para exterior, ya comentábamos que se trata
+                            de una variedad que puede alcanzar un gran porte, por ello lo mejor es dejarlas
+                            bien espaciadas las unas de las otras y darle un buen crecimiento para que se
+                            expanda lo máximo posible. En interior, todo lo contrario, muchas plantas pequeñas
+                            con muy poco tiempo de crecimiento (si le damos más, tendríamos un problema de
+                            espacio dentro de la sala o armario de cultivo).</p>
+
+                        <p class="card-text">
+                            Por este motivo, debido a su rapidez, aconsejan para el interior comenzar lo
+                            antes posible con el abono de floración. En crecimiento, una Kritikal Bilbo come
+                            a una EC máxima de 1,4; mientras que en floración podemos ir subiendo la EC hasta
+                            un máximo de 2,4 en nuestra mezcla de nutrientes, con más de esta cantidad
+                            estaríamos pecando de sobrefertilización. Con estos niveles, dada su rapidez,
+                            lo recomendado es terminar con el PK alto un par de semanas antes de la cosecha,
+                            para dedicar este tiempo a los lavados. También nos recomiendan utilizar un finalizador
+                            en esta etapa de precosecha, para que se formen azúcares y la planta pueda brindar
+                            toda esa gama de olores dulces y frutales que la caracterizan.</p>
+                        <hr>
+                        <p style="font-family: italic;">
+                            Suscribete para informarte acerca de actualizaciones sobre esta cepa!
+                        </p>
+                        <hr>
+
+                        <a href="{% url 'autocultivo' %}" class="btnNew">
+                            <div class="arrowNew"></div>
+                            Volver
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+    </div> <!-- -->
+    
+</body>
+
+</html>
+{% endblock %}

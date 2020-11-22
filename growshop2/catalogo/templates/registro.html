@@ -1,0 +1,109 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro | QueCorra Growshop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="icon" type="image/icon type" href="{% static 'img/icono.ico' %}">
+
+    <!-- CSS Propios-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/EstRegistro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- JS Propios-->
+    <script src="{% static 'js/Funciones.js' %}" type="text/Javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+
+    <style>
+        body {
+            background-color: #E65573;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+        #caja {
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 1px;
+        padding-left: 5px;
+        margin: 0;
+        background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div id=capa>
+        <!--TITULO AUTOCULTIVO-->
+        <br>
+        <br>
+        <div class="row justify-content-around">
+            <div class="col-xl-7 col-lg-5 col-md-5 col-sm-5 col-5">
+                <div id="caja">
+                    <center>
+                        <h1 style="color: black;">¡Regístrate aquí!</h1>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row justify-content-around">
+            <div class="col-xl-7 col-lg-5 col-md-5 col-sm-5 col-5">
+                <div id="caja">
+                    <div class="letras">
+                        <center>
+                            <h1 style="color: black;">Ingresa tus datos</h1>
+                            <br>
+                        </center>
+                        <form id="mi-formulario" action="{% url 'inicio' %}">
+                            <label style="color: black;">Correo Electrónico: </label>
+                            <input type="text" name="email" required placeholder="nombre@dominio.cl">
+                            <hr>
+
+                            <label style="color: black;">Correo Electrónico de Recuperación: </label>
+                            <input type="email" name="email2" required placeholder="nombre@dominio.cl">
+                            <hr>
+
+                            <label style="color: black;">Teléfono: </label>
+                            <input type="text" name="fono" minlength="9" placeholder="9 XXXX-XXXX" required>
+                            <hr>
+                            <label style="color: black;">Fecha: </label>
+                            <input type="date" name="fecha" min="1960-01-01" required>
+                            <hr>
+                            <label style="color: black;">Contraseña: </label>
+                            <input type="password" id="password" name="password" minlength="6"
+                                placeholder="Mínimo de 6 caracteres" required>
+                            <hr>
+                            <label style="color: black;">Reingresa contraseña: </label>
+                            <input type="password" name="password2" minlength="6" required>
+                            <hr>
+                            <button> Regístrate </button>
+                            <hr>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div> <!-- -->
+    
+</body>
+
+</html>
+{% endblock %}

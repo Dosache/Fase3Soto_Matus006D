@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table style="margin-left:200px; margin-top: 20px;">
+        {{form.as_table}}
+    </table>
+    <input style="margin-left:200px; margin-top: 20px;" type="submit" value="Enviar">
+
+</form>
+<br>
+<br>
+<br>
+
+{% endblock %}

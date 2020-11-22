@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Eliminar accesorio</h1>
+<p>¿Seguro que desea eliminar este accesorio: {{accesorio}}?</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" action="" value="Borrar">
+</form>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block title %}<title>¿Quiénes somos? | QueCorra Growshop</title> {% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    {% load static %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="icon" type="image/icon type" href="{% static 'img/icono.ico' %}">
+
+    <!-- CSS Propios-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/EstQuien.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- JS Propios-->
+    <script src="{% static 'js/Funciones.js' %}" type="text/Javascript"></script>
+    <style>
+        body {
+            background-color: #E65573;
+        }
+        
+    </style>
+</head>
+    
+<body>
+    
+    <div id=capa>
+        <div class="row">
+            <div id=texto>
+                <h1>¿Quiénes somos?</h1>
+                <h3>Equipo QueCorra</h3>
+                <p>El equipo detrás de QueCorra Growshop está conformado por dos compañeros de instituto que llamaremos
+                    <span style="color:#E65573">Cristo Rey</span> y <span style="color:#E65573">Mapache</span>. 
+                    
+                </p>
+                <h3>¿Cómo surge esta iniciativa?</h3>
+                <p>QueCorra Growshop surge como una iniciativa de consumo 
+                    informado a cerca de un tema aún hoy en día considerado tabú: 
+                    el consumo de Cannabis Sativa y de hongos psicoactivos; ambos 
+                    considerablemente menos dañinos para el organismo que las drogas 
+                    legales y socialmente aceptadas como el tábaco o el alcohol, causantes 
+                    de <a href="https://www.who.int/es/news-room/detail/21-09-2018-harmful-use-of-alcohol-kills-more-than-3-million-people-each-year--most-of-them-men#:~:text=Seg%C3%BAn%20un%20informe%20publicado%20hoy,esas%20muertes%20correspondieron%20a%20hombres.">millones de muertes anuales</a>. Desde el equipo QueCorra y desde todo el colectivo cannabico del país consideramos que categorizar al cannabis como una droga dura del nivel de la cocaína, la pasta base, el crack o la heroína es ilógico dado su alto valor medicinal. Está bien documentado que la planta de cannabis no fue criminalizada por sus supuestos riesgos físicos, sino que tuvo su origen en temas político-económicos norteamericanos hace más de 80 años junto con periodismo sensacionalista. Así mismo ocurre con las hongos psicoactivos, siendo hoy considerados uno de los <a href="https://www.elmostrador.cl/cultura/2018/09/24/neurociencia-hongos-alucinogenos-ayudan-al-tratamiento-de-pacientes-con-depresion-severa/">mejores tratamientos para la depresión</a> y la drogadicción. También criminalizados por la llamada "guerra contra las drogas" impulsada por el ex presidente estadounidense Richard Nixon hace apenas 50 años, cuando estas sustancias datan su uso por parte de civilizaciones antiguas desde hace más de 7000 años. Por eso y mucho más consideramos que este es un tema sobre el que se debe informar y ser responsables y consecuentes a la hora de abordarlo, por eso abogamos por una modificación a la Ley 20.000 y a la descriminilización de los usuarios de estas sustancias, optando por una regulación de estas, que además puede abrir nuevos mercados para el país, como es el caso de Uruguay, la ciudad de Amsterdam y más de 10 estados de Estados Unidos.</p>
+
+                <center>
+                    <a href="https://www.bbc.com/mundo/noticias/2010/11/101101_alcohol_drogas_men" target="_blank">
+                        <img src="{% static 'img/grafico.jpg' %}" border="1" alt="Comparativa">
+                    </a>
+                </center>
+
+                <br>
+                <h3>Gente pulenta</h3>
+                <p>Amigos de 
+                    <a href="https://www.quema.cl/" target="_blank">Quema SmokeShop</a>,
+                    <a href="https://www.mantun.cl/" target="_blank">Mantun</a>, 
+                    <a href="https://www.envola.cl/" target="_blank">En Volá</a>, 
+                    <a href="https://astrogrowshop.cl/" target="_blank">Astro Growshop</a> y 
+                    <a href="https://www.lajuana.cl/sweet-seeds/" target="_blank">Sweet seeds</a>
+                </p>
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
+
+{% endblock %}

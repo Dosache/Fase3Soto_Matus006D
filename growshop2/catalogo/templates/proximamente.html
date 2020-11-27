@@ -99,7 +99,7 @@
             </div>
 
         </div>
-        
+
         <hr>
 
         <div class="row justify-content-around">
@@ -137,14 +137,15 @@
             </div>
 
         </div>
-        
+
         <hr>
 
+        {% if user.is_authenticated %}
         <div class="row justify-content-around">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <center>
                     <ul id=categorias>
-                        <li><a style="color: white;" href="{% url 'accesorio_form' %}" >Agregar producto + </a></li>
+                        <li><a style="color: white;" href="{% url 'accesorio_form' %}">Agregar producto + </a></li>
                         <li>Eliminar Producto</li>
                         <li>Marcas</li>
                         <li>Categorias</li>
@@ -154,6 +155,9 @@
 
             </div>
         </div>
+        {% else %}
+        <hr>
+        {% endif %}
 
 
         <br>

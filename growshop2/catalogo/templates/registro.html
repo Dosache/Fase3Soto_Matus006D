@@ -70,7 +70,7 @@
                             <h1 style="color: black;">Ingresa tus datos</h1>
                             <br>
                         </center>
-                        <form id="mi-formulario" action="{% url 'inicio' %}">
+                        <form id="mi-formulario" action="{% url 'inicio' %}">{% csrf_token %}
                             <label style="color: black;">Correo Electrónico: </label>
                             <input type="text" name="email" required placeholder="nombre@dominio.cl">
                             <hr>

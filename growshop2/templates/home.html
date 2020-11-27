@@ -1,0 +1,14 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h1>Inicia Sesion Aqui</h1>
+
+{% if user.is_authenticated %}
+  <h3>Hola! {{ user.username }}</h3>
+ 
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+{% endblock %}

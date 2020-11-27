@@ -1,0 +1,24 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<br>
+<br>
+
+<div class="caja">
+  <center>
+    <h2>Inicia Sesion</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Inicar Sesion</button>
+      </form>
+  </center>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

@@ -22,10 +22,10 @@ from django.views.generic.base import TemplateView #nuevo
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('catalogo/',include('catalogo.urls')) #Incluye el archivo urls de catálogo
+    path('catalogo/',include('catalogo.urls')), #Incluye el archivo urls de catálogo
     path('sesion/',include('sesion.urls')),
     path('sesion/',include('django.contrib.auth.urls')),
-    path('',TemplateView.as_view(template_name='home.html'),name='home'), #nuevo
+    path('',TemplateView.as_view(template_name='inicio.html'),name='home'), #nuevo
 
 ]
 

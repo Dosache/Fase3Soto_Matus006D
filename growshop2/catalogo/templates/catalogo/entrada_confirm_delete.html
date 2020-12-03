@@ -8,12 +8,12 @@
 <div class="caja" style="color: white;">
     <center>
     <h1>Eliminar accesorio</h1>
-    <p>¿Seguro que desea eliminar este accesorio?</p>
-    <p>| Accesorio: {{accesorio.nombre}} | Marca: {{accesorio.marca}} | Precio: {{accesorio.precio}} |</p>
+    <p>¿Seguro que desea eliminar esta entrada?</p>
+    <p>| Nombre de entrada: {{entrada.titulo}} |</p>
 
     <form action="" method="post">
         {% csrf_token %}
-        <input type="submit" action="" class="btn btn-primary" value="Borrar">
+        <input type="submit" action="" class="btn btn-primary" value="Eliminar">
     </form>
     </center>
 </div>

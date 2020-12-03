@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from . models import Categoria, Accesorio, InstanciaAccesorio, Marca
+from . models import Categoria, Accesorio, InstanciaAccesorio, Marca, Tipo, Entrada
 
 # Create your views here.
 def inicio(request): #Request = consulta HTTP
@@ -14,7 +14,7 @@ def inicio(request): #Request = consulta HTTP
         context={'num_catego':num_catego},
     )
 
-def proximamente(request): #Request = consulta HTTP
+def proximamenteCategoria(request): #Request = consulta HTTP
     num_catego=Categoria.objects.all()#.count()
     
     return render( #Crea y retorna una página HTML como respuesta
@@ -74,7 +74,6 @@ def terminosycon(request): #Request = consulta HTTP
     return render( #Crea y retorna una página HTML como respuesta
         request,
         'terminosycon.html',
-        context={'num_catego':num_catego},
     )
 
 class AccesorioCreate(CreateView):
@@ -87,8 +86,37 @@ class AccesorioUpdate(UpdateView):
     
 class AccesorioDelete(DeleteView):
     model = Accesorio
-    success_url = reverse_lazy('Accesorios')
+    success_url = reverse_lazy('inicio')
 
 class AccesorioDetailView(generic.DetailView):
     model = Accesorio 
 
+def proximamente(request):
+    num_accesorio=Accesorio.objects.all() #objetos tipo accesorio
+    
+    return render(
+        request,
+        'proximamente.html',
+        context={'num_accesorio':num_accesorio},
+    )
+
+#creacion de vistas/def
+
+class EntradaCreate(CreateView):
+    model = Entrada
+    fields = '__all__'
+
+class EntradaUpdate(UpdateView):
+    model = Entrada
+    fields = '__all__'
+    
+class EntradaDelete(DeleteView):
+    model = Entrada
+    success_url = reverse_lazy('inicio')
+
+class EntradaDetailView(generic.DetailView):
+    model = Entrada
+
+class EntradaListView(generic.ListView): #for de entradas
+    model = Entrada
+    paginate_by = 10

@@ -41,7 +41,7 @@
                 <center>
                     <ul id=categorias>
                         <li>
-                            <a href="{% url 'proximamente' %}" target="_self" style="color: white;">CEPAS</a>
+                            <a href="{% url 'proximamente' %}" target="_self" style="color: white;">ACCESORIOS</a>
                         </li>
                         <li>
                             <a href="#" target="_self" onclick="proximamente()" style="color: white;">SETAS</a>
@@ -65,91 +65,28 @@
         </div>
 
         <div class="row justify-content-around">
-            <div class="col-xl-3 col-lg-3 col-md-7 col-sm-8 col-7">
+            {% for accesorio in num_accesorio %}
+            <div class="col-xl-3 col-lg-3 col-md-7 col-sm-8 col-7" style="margin-left: 10px;">
                 <div class="card">
-                    <img class="card-img-top img" src="{% static 'img/cepatienda1.jpg' %}">
+                    <img class="card-img-top img" src="{{ accesorio.imagen.url }}">
                     <div class="card-body" style="background-color: #DA71EB; color: white;">
-                        <h4 class="card-title">GENEHTIK SEEDS - Northern Lights Auto</h4>
-                        <p class="card-text">$29.990</p>
-                        <a href="#" class="btn btn-primary">Agregar al carro</a>
+                        <h4 class="card-title">{{ accesorio.nombre }}</h4>
+                        <p class="card-text">$ {{ accesorio.precio }}</p>
+                        <a href="{% url 'accesorio-detail' accesorio.pk %}" class="btn btn-primary">Ver màs</a>
                     </div>
                 </div>
             </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-7 col-sm-8 col-7">
-                <div class="card">
-                    <img class="card-img-top" src="{% static 'img/cepatienda2.jpg' %}">
-                    <div class="card-body" style="background-color: #DA71EB; color: white;">
-                        <h4 class="card-title">GENEHTIK SEEDS - Ese T. Bilbo Automatica</h4>
-                        <p class="card-text">$23.990 </p>
-                        <a href="#" class="btn btn-primary">Agregar al carro</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-7 col-sm-8 col-7">
-                <div class="card">
-                    <img class="card-img-top" src="{% static 'img/cepatienda3.jpg' %}">
-                    <div class="card-body" style="background-color: #DA71EB; color: white;">
-                        <h4 class="card-title">GENEHTIK SEEDS - Kritikal Bilbo x Ak 47</h4>
-                        <p class="card-text">$17.990</p>
-                        <a href="#" class="btn btn-primary">Agregar al carro</a>
-                    </div>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
-
         <hr>
 
-        <div class="row justify-content-around">
-            <div class="col-xl-3 col-lg-3 col-md-7 col-sm-8 col-7">
-                <div class="card">
-                    <img class="card-img-top" src="{% static 'img/cepatienda4.jpg' %}">
-                    <div class="card-body" style="background-color: #DA71EB; color: white;">
-                        <h4 class="card-title">GENEHTIK SEEDS - Gorila Bilbo</h4>
-                        <p class="card-text">$17.990</p>
-                        <a href="#" class="btn btn-primary" onclick="proximamente()">Agregar al carro</a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-7 col-sm-8 col-7">
-                <div class="card">
-                    <img class="card-img-top" src="{% static 'img/cepatienda5.jpg' %}">
-                    <div class="card-body" style="background-color: #DA71EB; color: white;">
-                        <h4 class="card-title">GENEHTIK SEEDS - OG Lemon Bilbo</h4>
-                        <p class="card-text">$17.990</p>
-                        <a href="#" class="btn btn-primary" onclick="proximamente()">Agregar al carro</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-7 col-sm-8 col-7">
-                <div class="card">
-                    <img class="card-img-top" src="{% static 'img/cepatienda6.jpg' %}">
-                    <div class="card-body" style="background-color: #DA71EB; color: white;">
-                        <h4 class="card-title">GENEHTIK SEEDS - Goxuak Auto</h4>
-                        <p class="card-text">$27.990</p>
-                        <a href="#" class="btn btn-primary" onclick="proximamente()">Agregar al carro</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <hr>
-
-        {% if user.is_authenticated %}
+        {% if user.is_authenticated %} 
         <div class="row justify-content-around">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <center>
                     <ul id=categorias>
                         <li><a style="color: white;" href="{% url 'accesorio_form' %}">Agregar producto + </a></li>
-                        <li>Eliminar Producto</li>
-                        <li>Marcas</li>
-                        <li>Categorias</li>
-                        <li>Stock</li>
                     </ul>
                 </center>
 

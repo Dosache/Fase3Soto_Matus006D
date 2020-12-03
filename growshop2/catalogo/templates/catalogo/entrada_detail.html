@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<div class="caja" style="color: white;">
+    <h1 style="margin-left: 10px;">Datos de la entrada:</h1>
+    <hr>
+    <h3 style="margin-left: 30px;">- Nombre de entrada: {{entrada.titulo}}</h3>
+    <h3 style="margin-left: 30px;">- Descripcion: {{entrada.descripcion}}</h3>
+    <hr>
+    {% if user.is_staff  %}
+        <center>
+            <ul id=categorias>
+                <li><a style="color: white;" href="{% url 'entrada_update' pk=entrada.pk %}">Actualizar</a></li>
+                <li><a style="color: white;" href="{% url 'entrada_delete' pk=entrada.pk %}">Eliminar</a></li>
+                <li><a style="color: white;" href="{% url 'entrada_form' %}">Agregar otra entrada</a></li>
+                <li><a style="color: white;" href="{% url 'entrada' %}">Atrás</a></li>
+            </ul>
+        </center>
+    {% else %}{% endif %}
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

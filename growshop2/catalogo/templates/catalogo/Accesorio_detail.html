@@ -1,7 +1,25 @@
 {% extends "base_generic.html" %}
 {% block content %}
 
-<h1 style="margin-left:200px; margin-top: 200px;">Marca / Accesorio: {{accesorio}}</h1>
+<div class="caja" style="color: white;">
+    <h1 style="margin-left: 10px;">Datos del accesorio:</h1>
+    <hr>
+    <h3 style="margin-left: 30px;">- Accesorio: {{accesorio.nombre}}</h3>
+    <h3 style="margin-left: 30px;">- Marca: {{accesorio.marca}}</h3>
+    <h3 style="margin-left: 30px;">- Precio: {{accesorio.precio}}</h3>
+    <h3 style="margin-left: 30px;">- Imagen: {{accesorio.imagen.url}}</h3> <!--cambiar de h3 a img-->
+    <hr>
+    {% if user.is_authenticated  %}
+        <center>
+            <ul id=categorias>
+                <li><a style="color: white;" href="{% url 'accesorio_update' pk=accesorio.pk %}">Actualizar</a></li>
+                <li><a style="color: white;" href="{% url 'accesorio_delete' pk=accesorio.pk %}">Eliminar</a></li>
+                <li><a style="color: white;" href="{% url 'accesorio_form' %}">Agregar otro producto</a></li>
+                <li><a style="color: white;" href="{% url 'proximamente' %}">Atrás</a></li>
+            </ul>
+        </center>
+    {% else %}{% endif %}
+</div>
 <br>
 <br>
 <br>
@@ -11,4 +29,5 @@
 <br>
 <br>
 <br>
+
 {% endblock %}

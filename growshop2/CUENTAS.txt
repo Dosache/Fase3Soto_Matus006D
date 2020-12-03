@@ -1,0 +1,7 @@
+-------------- Admin --------------
+Usuario: Admin
+Contraseña: contra1
+
+-------------- Vendedor --------------
+Usuario: Vendedor
+Contraseña: contra123

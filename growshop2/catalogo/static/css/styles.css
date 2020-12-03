@@ -120,14 +120,14 @@ html{
 }
 
 .loguear a{
-    background-color: red;
+    background-color: rgb(158, 67, 243);
     color: white;
     padding: 0.5em 1.0em;
     text-decoration: none;
     text-transform: uppercase;
 }
 .loguear a:hover{
-  background-color: #555;
+  background-color: #9D6FDE;
 }
 
 .loguear a:active{

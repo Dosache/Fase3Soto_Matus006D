@@ -101,6 +101,17 @@
         </div>
         <br>
         <br>
+        <hr>
+        {% if user.is_authenticated  %}
+            {% if user.is_staff %}
+                <center>
+                    <ul id=categorias>
+                        <li><a target="_blank" href="/rest/users/">Configuración de usuario</a></li>
+                    </ul>
+                </center>
+
+        {% else %}{% endif %}{% else %}{% endif %}
+        <br>
     </div> <!-- -->
     
 </body>

@@ -23,6 +23,8 @@ from django.views.generic.base import TemplateView #nuevo
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalogo/',include('catalogo.urls')), #Incluye el archivo urls de catálogo
+    path('rest/', include('quick.urls')),
+    path('rest-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('sesion/',include('sesion.urls')),
     path('sesion/',include('django.contrib.auth.urls')),
     path('',TemplateView.as_view(template_name='inicio.html'),name='home'), #nuevo

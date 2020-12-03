@@ -45,6 +45,9 @@ class Entrada(models.Model):
 	descripcion = models.TextField(max_length=5000)
 	imagen = models.ImageField(upload_to='imagen/', null=False)
 	tipoentrada = models.ManyToManyField(Tipo)
+
+	class Meta:
+		ordering = ['titulo']
     
 	def get_absolute_url(self):
 		return reverse('entrada-detail', args=[str(self.id)])
